@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="CastBingVideos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CastBingVideos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="Button_InvokeScript" Content="Invoke window.external.notify script" Click="Click_Button_Invoke" Grid.Row="0"/>
+        <WebView x:Name="BingVideoWebView" Source="https://www.bing.com/videos/search?q=microsoft" Grid.Row="1"/>
+    </Grid>
+</Page>
